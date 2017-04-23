@@ -18,7 +18,6 @@ namespace Bot_ApplicationTest.Dialogs
         private async Task MessageReceivedAsync(IDialogContext context, IAwaitable<object> result)
         {
             var activity = await result as Activity;
-
             // calculate something for us to return
             int length = (activity.Text ?? string.Empty).Length;
 

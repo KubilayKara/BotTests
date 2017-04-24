@@ -21,7 +21,9 @@ namespace Bot_ApplicationTest
             if (activity.Type == ActivityTypes.Message)
             {
                 //await Conversation.SendAsync(activity, () => new Dialogs.LuisTestDialog());
-                 await Conversation.SendAsync(activity, () => FormDialog.FromForm(Issue.MakeForm));
+                //  await Conversation.SendAsync(activity, () => FormDialog.FromForm(Issue.MakeForm));
+                await Conversation.SendAsync(activity, () => new Dialogs.SimpleDialog());
+                
             }
             else
             {

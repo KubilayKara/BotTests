@@ -8,6 +8,7 @@ namespace Bot_ApplicationTest.Dialogs
     [Serializable]
     public class RootDialog : IDialog<object>
     {
+
         public Task StartAsync(IDialogContext context)
         {
             context.Wait(MessageReceivedAsync);

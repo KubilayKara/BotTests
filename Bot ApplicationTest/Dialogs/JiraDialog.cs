@@ -1,12 +1,14 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.Bot.Builder.Dialogs;
+﻿using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using System.Web;
 
 namespace Bot_ApplicationTest.Dialogs
 {
-    [Serializable]
-    public class RootDialog : IDialog<object>
+    public class JiraDialog:LuisDialog<object>
     {
         public Task StartAsync(IDialogContext context)
         {
@@ -26,7 +28,5 @@ namespace Bot_ApplicationTest.Dialogs
 
             context.Wait(MessageReceivedAsync);
         }
-
-
     }
 }

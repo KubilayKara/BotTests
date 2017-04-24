@@ -4,6 +4,8 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
+using Microsoft.Bot.Builder.FormFlow;
+using JiraSimulation;
 
 namespace Bot_ApplicationTest
 {
@@ -18,7 +20,8 @@ namespace Bot_ApplicationTest
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                await Conversation.SendAsync(activity, () => new Dialogs.LuisTestDialog());
+                //await Conversation.SendAsync(activity, () => new Dialogs.LuisTestDialog());
+                 await Conversation.SendAsync(activity, () => FormDialog.FromForm(Issue.MakeForm));
             }
             else
             {

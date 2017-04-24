@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IBTechJiraSmulation
+namespace JiraSimulation
 {
     public class Issue
     {
+        public string IssueCode { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public DateTime Deadline { get; set; }
